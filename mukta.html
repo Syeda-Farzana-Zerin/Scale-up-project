@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukta – Software Engineer</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portfolio-wrapper { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
+        .profile-header { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+        .profile-header img { width: 260px; height: 260px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .profile-info h1 { font-size: 2.8rem; color: rgb(83, 83, 221); margin-bottom: 10px; font-family: "Noto Serif"; }
+        .profile-info h3 { font-size: 1.5rem; color: #444; }
+        .section-title { font-size: 2rem; margin-top: 40px; color: rgb(83, 83, 221); font-family: "Noto Serif"; }
+        .about-text { font-size: 1.2rem; color: #444; max-width: 900px; line-height: 1.7; }
+        .skills-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 15px; max-width: 600px; }
+        .skills-list div { background: #eef0ff; padding: 10px 15px; border-radius: 8px; }
+        .experience-box { background: #f5f6ff; padding: 20px; border-radius: 12px; margin-top: 20px; max-width: 800px; }
+        .back-btn { background-color: rgb(83, 83, 221); color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; margin-top: 40px; font-size: 1.1rem; }
+        .back-btn:hover { background-color: rgb(55, 55, 180); }
+    </style>
+</head>
+
+<body class="inter">
+
+    <header class="header">
+        <nav class="navbar display-flex">
+            <img class="logo" src="Images/image/logo.jpg">
+            <ul class="navbar-items display-flex">
+                <li class="navbar-item"><a class="navbar_link grey" href="index.html">Hjem</a></li>
+                <li class="navbar-item"><a class="navbar_link grey" href="#">Om Oss</a></li>
+                <li class="navbar-item"><a class="navbar_link grey" href="registration.html">Register</a></li>
+                <li class="navbar-item"><a class="navbar_link dark-grey" href="#">Portfolio</a></li>
+                <li class="navbar-item"><a class="navbar_link grey" href="login.html">Log In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="portfolio-wrapper">
+
+        <div class="profile-header">
+            <img src="Images/image/Mukta.jpeg" alt="Mukta image">
+            <div class="profile-info">
+                <h1>Boishakhi Mukta</h1>
+                <h3>Software Engineer</h3>
+            </div>
+        </div>
+
+        <h2 class="section-title">Om Meg</h2>
+        <p class="about-text">
+            Jeg er en motivert Software Engineer med sterk interesse for utvikling av moderne web- og backend-løsninger. 
+            Jeg liker å bygge robuste, brukervennlige og effektive systemer. Med erfaring innen programmering, databaser 
+            og problemløsing brenner jeg for å lage løsninger som skaper verdi for brukere og organisasjoner.
+        </p>
+
+        <h2 class="section-title">Ferdigheter</h2>
+        <div class="skills-list">
+            <div>JavaScript</div>
+            <div>React</div>
+            <div>Python</div>
+            <div>HTML & CSS</div>
+            <div>Git & Github</div>
+            <div>SQL Databaser</div>
+        </div>
+
+        <h2 class="section-title">Erfaring</h2>
+        <div class="experience-box">
+            <h3>Software Engineering – Prosjekter</h3>
+            <p>
+                • Utviklet dynamiske brukergrensesnitt  
+                • Implementert API-integrasjoner  
+                • Jobbet med feilsøking, optimalisering og testing  
+                • Erfaring med fullstack-prosjekter og teamarbeid  
+            </p>
+        </div>
+
+        <button class="back-btn" onclick="location.href='index.html'">← Tilbake til Hjem</button>
+    </div>
+
+</body>
+</html>

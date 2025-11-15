@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f5f7ff;
+            font-family: "Inter", sans-serif;
+        }
+
+        .login-container {
+            width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px;
+            background: rgb(83, 83, 221);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 15px;
+            color: #555;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 id="form-title">Sign In</h2>
+
+        <!-- Sign In Form -->
+        <form id="signin-form">
+            <input type="text" id="signin-username" placeholder="Username" required />
+            <input type="password" id="signin-password" placeholder="Password" required />
+            <button class="btn" type="button" onclick="signIn()">Sign In</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" style="display: none;">
+            <input type="text" id="signup-username" placeholder="Create Username" required />
+            <input type="password" id="signup-password" placeholder="Create Password" required />
+            <button class="btn" type="button" onclick="signUp()">Sign Up</button>
+        </form>
+
+        <p class="toggle-text" onclick="toggleForms()">Don't have an account? Sign up</p>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signin = document.getElementById('signin-form');
+            const signup = document.getElementById('signup-form');
+            const title = document.getElementById('form-title');
+            const toggle = document.querySelector('.toggle-text');
+
+            if (signin.style.display === 'none') {
+                signin.style.display = 'block';
+                signup.style.display = 'none';
+                title.textContent = 'Sign In';
+                toggle.textContent = "Don't have an account? Sign up";
+            } else {
+                signin.style.display = 'none';
+                signup.style.display = 'block';
+                title.textContent = 'Sign Up';
+                toggle.textContent = 'Already have an account? Sign in';
+            }
+        }
+
+        function signUp() {
+            const user = document.getElementById('signup-username').value;
+            const pass = document.getElementById('signup-password').value;
+
+            if (user && pass) {
+                localStorage.setItem('savedUser', user);
+                localStorage.setItem('savedPass', pass);
+                alert('Signup successful! You can now sign in.');
+                toggleForms();
+            }
+        }
+
+        function signIn() {
+            const user = document.getElementById('signin-username').value;
+            const pass = document.getElementById('signin-password').value;
+
+            const savedUser = localStorage.getItem('savedUser');
+            const savedPass = localStorage.getItem('savedPass');
+
+            if (user === savedUser && pass === savedPass) {
+                alert('Login successful!');
+                window.location.href = 'index.html';
+            } else {
+                alert('Incorrect username or password');
+            }
+        }
+    </script>
+</body>
+</html>

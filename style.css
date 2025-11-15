@@ -1,0 +1,350 @@
+.noto-serif{
+  font-family: "Noto Serif";
+  font-optical-sizing: auto;
+}
+
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/*shared style*/
+
+.header, .arbeidssøkere, .footer{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+.blue {
+    color: rgb(83, 83, 221);
+}
+
+.dark-grey {
+  color: rgba(37, 36, 50, 1);
+}
+
+.grey{
+  color:rgba(137, 135, 161, 1)
+}
+
+.white {
+    color: whitesmoke;
+}
+
+
+
+
+/*Header Section*/
+
+.header {
+
+}
+
+.navbar {
+    justify-content: space-between;
+}
+
+.logo {
+    width: 15rem;
+    height: 10rem;
+}
+
+.navbar-items {
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-item {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.navbar-item :hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.navbar_link {
+    text-decoration: none;
+    
+    
+}
+
+.navbar_link :hover{
+    cursor: pointer;
+}
+
+/*banner section starts here*/
+
+.banner {
+    align-items: center;
+    margin-top: 130px;
+    justify-content: space-around;
+}
+
+.banner-desciption {
+    
+}
+
+.banner-heading {
+    font-size: 3rem;
+    font-style: 900;
+}
+
+.banner-paragraph {
+    font-size: 1.5rem;
+    max-width: 570px;
+    text-shadow: 0 1px 4px rgb(239, 238, 245);
+    
+}
+
+.banner-img {
+    max-width: 570px;
+    max-height: 355px;
+    border-radius: 1rem;
+    filter: drop-shadow(8px 8px 10px gray);
+}
+
+/*Vare Arbeidssøkere section starts*/
+
+.arbeidssøkere {
+    margin-top: 140px;
+    margin-bottom: 120px;
+}
+
+.arbeidssøkere-heading {
+    font-size: 3rem;
+    font-style: 900;
+}
+
+.arbeidssøkere-description {
+    font-size: 1.5rem;
+}
+
+.portfolio-containers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.portfolio-container {
+    border: 2px solid gray;
+    border-radius: 1rem;
+    padding: 10px 10px;
+}
+
+.deltakere-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+
+.deltakere-name {
+    font-size: 1.2rem;
+}
+
+.deltakere-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.primary-btn {
+  background-color: rgb(83, 83, 221);;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+/* subscribe section starts*/
+
+.contact-form {
+    margin-top: 0 auto;
+}
+
+.subscribe{
+    flex-direction: column;
+}
+
+.subscribe-img {
+    width: 100%;
+    height: 500px;
+    filter: grayscale(50%);
+}
+
+.subscribe-heading {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+#email {
+  flex: 0.7;
+  padding:10px;
+  outline: none;
+}
+
+.subscribe-form {
+ margin: 0 auto;
+ justify-content: center;
+ align-items: center;
+ max-width: 70%;
+ padding: 0px 30px;
+}
+
+.subscribe-btn {
+  padding: 12px;
+  border: none;
+  background-color: rgb(83, 83, 221);
+  color: white;
+}
+
+.subscribe-btn:hover{
+ cursor: pointer;   
+}
+
+/*footer starts here*/
+.footer {
+  margin-top: 3.2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright{
+    font-size: 1.5rem;
+}
+
+.social-media {
+  gap: 2rem;
+}
+
+.fa-linkedin, .fa-facebook {
+  font-size: 30px;
+  color: rgb(9, 83, 211);
+}
+
+.fa-youtube, .fa-instagram {
+  font-size: 30px;
+  color: red;
+}
+
+
+/*registreringsskjema starts here*/
+
+.registreringsskjema{
+  margin: 0 auto;
+  background-color: #acf3c0;
+  border-radius: 20px;
+  padding: 40px;
+  Width: 600px;
+}
+
+.registreringsskjema-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.skjema{
+    justify-content: center;
+    align-items: center;
+}
+
+.skjema-name {
+    gap: 3.2rem;
+}
+
+.skjema label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+.skjema input[type="text"],
+.skjema input[type="email"],
+.skjema input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Resume upload section */
+.upload-section {
+  margin-top: 20px;
+}
+
+.upload-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #a5c3f9;
+  border-radius: 8px;
+  height: 180px;
+  cursor: pointer;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.upload-box:hover {
+  background-color: #f9fbff;
+  border-color: #5998ff;
+}
+
+.upload-box .choose {
+  color: #0066ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.upload-box .limit {
+  color: gray;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* Hide real file input */
+.upload-box input[type="file"] {
+  display: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #004dcc;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: top; /* keeps head visible */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
