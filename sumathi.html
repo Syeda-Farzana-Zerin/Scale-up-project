@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumathi – Cloud Services Specialist</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portfolio-wrapper { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
+        .profile-header { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+        .profile-header img { width: 260px; height: 260px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .profile-info h1 { font-size: 2.8rem; color: rgb(83, 83, 221); margin-bottom: 10px; font-family: "Noto Serif"; }
+        .profile-info h3 { font-size: 1.5rem; font-weight: 600; color: #444; }
+        .section-title { font-size: 2rem; margin-top: 40px; color: rgb(83, 83, 221); font-family: "Noto Serif"; }
+        .about-text { font-size: 1.2rem; margin-top: 10px; color: #444; line-height: 1.7; max-width: 900px; }
+        .skills-list { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 15px; gap: 10px; max-width: 600px; }
+        .skills-list div { background: #eef0ff; padding: 10px 15px; border-radius: 8px; font-size: 1.1rem; color: #333; }
+        .experience-box { background: #f5f6ff; padding: 20px; border-radius: 12px; margin-top: 20px; max-width: 800px; }
+        .back-btn { background-color: rgb(83, 83, 221); color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; margin-top: 40px; font-size: 1.1rem; }
+        .back-btn:hover { background-color: rgb(55, 55, 180); }
+    </style>
+</head>
+
+<body class="inter">
+
+<header class="header">
+    <nav class="navbar display-flex">
+        <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset">
+        <ul class="navbar-items display-flex">
+            <li class="navbar-item"> <a class="navbar_link grey" href="index.html"> Hjem </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="Omoss.html"> Om Oss </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="registration.html"> Register </a></li>
+            <li class="navbar-item"> <a class="navbar_link dark-grey" href="#"> Portfolio </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="login.html"> Log In </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="portfolio-wrapper">
+
+    <div class="profile-header">
+        <img class="profile-photo" src="Images/image/sumoti.jpeg" alt="Sumathi profile image">
+        <div class="profile-info">
+            <h1>Sumathi</h1>
+            <h3>Cloud Services Specialist</h3>
+        </div>
+    </div>
+
+    <h2 class="section-title">Om Meg</h2>
+    <p class="about-text">
+        Jeg er Sumathi, en dedikert Cloud Services Specialist med solid erfaring innen Microsoft Cloud-tjenester, nettverksoppsett og systemadministrasjon. Jeg liker å jobbe strukturert og analytisk, og trives med å sikre at digitale tjenester fungerer stabilt, skalerbart og sikkert. Med bakgrunn i både teknisk support og SAP material management bidrar jeg med helhetlig forståelse av driftsbehov, systemintegrasjon og moderne skyplattformer.
+    </p>
+
+    <h2 class="section-title">Ferdigheter</h2>
+    <div class="skills-list">
+        <div>Microsoft Cloud Services</div>
+        <div>Nettverk</div>
+        <div>Ruter-installasjon</div>
+        <div>SAP Material Management</div>
+        <div>Systemadministrasjon</div>
+        <div>IT-support</div>
+    </div>
+
+    <h2 class="section-title">Erfaring</h2>
+    <div class="experience-box">
+        <h3 style="margin-bottom: 10px;">Cloud Services – Prosjekter & Arbeid</h3>
+        <p>
+            • Administrert og konfigurert Microsoft Cloud-tjenester for sikre og skalérbare løsninger.<br>
+            • Installert og konfigurert rutere og nettverksinfrastruktur for stabile tilkoblingsmiljøer.<br>
+            • Utført systemfeilsøking, tilgangsstyring og teknisk support for ulike brukermiljøer.<br>
+            • Arbeidet med SAP Material Management for lagerstyring og prosessforbedring.<br>
+            • Bidratt i prosjekter som involverer migrasjon til skyen og optimalisering av driftsprosesser.<br>
+        </p>
+    </div>
+
+    <button class="back-btn" onclick="location.href='index.html'">← Tilbake til Hjem</button>
+</div>
+
+</body>
+</html>

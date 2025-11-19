@@ -12,27 +12,149 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .about-wrapper { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
-        .section-title { font-size: 2.4rem; color: rgb(83, 83, 221); font-family: "Noto Serif"; margin-top: 40px; }
-        .intro-text { font-size: 1.2rem; color: #444; line-height: 1.7; margin-top: 20px; }
-        .team-section { margin-top: 50px; }
-        .team-member { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 40px; }
-        .team-member img { width: 180px; height: 180px; border-radius: 12px; object-fit: cover; }
-        .team-info h3 { margin: 0; font-size: 1.6rem; color: #333; }
-        .team-info p.role { font-size: 1.1rem; color: #666; margin: 8px 0; }
-        .team-info p.bio { font-size: 1rem; color: #444; line-height: 1.5; }
-        .back-btn { background-color: rgb(83, 83, 221); color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; margin-top: 40px; font-size: 1.1rem; }
-        .back-btn:hover { background-color: rgb(55, 55, 180); }
+        .page-bg {
+            background: radial-gradient(circle at top left, #f1f5ff 0%, #ffffff 50%, #fdf2ff 100%);
+            min-height: 100vh;
+            padding-bottom: 4rem;
+        }
+
+        .about-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            color: rgb(83, 83, 221);
+            font-family: "Noto Serif";
+            margin-top: 40px;
+        }
+
+        /* Intro section with image on right */
+        .intro-flex {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .intro-text-wrapper {
+            flex: 1 1 55%;
+        }
+
+        .intro-text {
+            font-size: 1.15rem;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .intro-image-wrapper {
+            flex: 1 1 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .intro-image-wrapper img {
+            width: 100%;
+            max-width: 410px;
+            border-radius: 18px;
+            object-fit: cover;
+
+            background: linear-gradient(135deg, rgba(255, 192, 253, 0.4), rgba(142, 123, 255, 0.4));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.5);
+
+            box-shadow:
+                0 25px 55px rgba(83, 83, 221, 0.25),
+                0 15px 35px rgba(249, 115, 222, 0.25);
+        }
+
+        .team-section {
+            margin-top: 60px;
+        }
+
+        .team-member {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+
+            padding: 25px;
+            border-radius: 20px;
+
+            background: linear-gradient(135deg, rgba(255, 192, 253, 0.35), rgba(142, 123, 255, 0.35));
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+
+            box-shadow:
+                0 25px 60px rgba(83, 83, 221, 0.2),
+                0 12px 30px rgba(249, 115, 222, 0.25);
+        }
+
+        .team-member img {
+            width: 160px;
+            height: 160px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .team-info h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: #2f2f6d;
+            font-weight: 700;
+        }
+
+        .team-info p.role {
+            font-size: 1.05rem;
+            color: #6b7280;
+            margin: 5px 0 12px;
+        }
+
+        .team-info p.bio {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, #5353dd, #f973c9);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 999px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 50px;
+            cursor: pointer;
+            box-shadow: 0 18px 40px rgba(79, 70, 229, 0.35);
+            transition: 0.2s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 50px rgba(79, 70, 229, 0.55);
+        }
     </style>
 </head>
 
 <body class="inter">
+<div class="page-bg">
+
     <header class="header">
         <nav class="navbar display-flex">
-            <img class="logo" src="Images/image/logo.jpg" alt="Nettverkshuset logo">
+            <div class="logo-wrapper display-flex">
+                <img class="logo" src="Images/image/logo.jpg" alt="Nettverkshuset logo">
+                <span class="brand-text">Nettverkshuset</span>
+            </div>
+
             <ul class="navbar-items display-flex">
                 <li class="navbar-item"><a class="navbar_link grey" href="index.html">Hjem</a></li>
-                <li class="navbar-item"><a class="navbar_link dark-grey" href="om-oss.html">Om Oss</a></li>
+                <li class="navbar-item"><a class="navbar_link active" href="om-oss.html">Om Oss</a></li>
                 <li class="navbar-item"><a class="navbar_link grey" href="registration.html">Register</a></li>
                 <li class="navbar-item"><a class="navbar_link grey" href="login.html">Log In</a></li>
             </ul>
@@ -41,54 +163,95 @@
 
     <div class="about-wrapper">
         <h1 class="section-title">Om oss</h1>
-        <p class="intro-text">
-          Nettverkshuset er et inkluderende fellesskap hvor mennesker fra ulike bakgrunner møtes for å skape nye muligheter sammen. Vi er en organisasjon som arbeider for å styrke deltakelse i arbeidslivet. 
-        </p>
-        <p class="intro-text">
-          Gjennom fellesskap, læring og samarbeid hjelper vi mennesker med å bygge nettverk, utvikle ferdigheter og finne sin plass i samfunnet. Våre tilbud inkluderer kurs, mentorprogrammer, praktisk arbeidserfaring og et inspirerende miljø for frivillige, gründere og arbeidssøkere. 
-        </p>
-        <p class="intro-text">
-          Vårt mål er å bidra til et mer mangfoldig og inkluderende samfunn, hvor flere får muligheten til å bruke sine ressurser og kompetanse. Nettverkshuset er mer enn et arbeidsfellesskap – det er en møteplass for læring, utvikling og fellesskap. 
-        </p>
 
+        <!-- INTRO WITH IMAGE ON RIGHT -->
+        <div class="intro-flex">
+            <div class="intro-text-wrapper">
+                <p class="intro-text">
+                    Nettverkshuset er et inkluderende fellesskap hvor mennesker fra ulike bakgrunner møtes
+                    for å skape nye muligheter sammen. Vi arbeider for å styrke deltakelse i arbeidslivet.
+                </p>
+
+                <p class="intro-text">
+                    Gjennom fellesskap, læring og samarbeid hjelper vi mennesker med å bygge nettverk, 
+                    utvikle ferdigheter og finne sin plass i samfunnet. Våre tilbud inkluderer kurs, 
+                    mentorprogrammer, praktisk arbeidserfaring og miljø for frivillige, gründere og arbeidssøkere.
+                </p>
+
+                <p class="intro-text">
+                    Vårt mål er å bidra til et mer mangfoldig og inkluderende samfunn hvor flere får muligheten 
+                    til å bruke sine ressurser og kompetanse. Nettverkshuset er mer enn et arbeidsfellesskap – 
+                    det er en møteplass for læring, utvikling og fellesskap.
+                </p>
+            </div>
+
+            <div class="intro-image-wrapper">
+                <img src="Images/image/Omoss.jpg" alt="Nettverkshuset team">
+            </div>
+        </div>
+
+        <!-- TEAM -->
         <div class="team-section">
-          <h2 class="section-title">Møt teamet vårt</h2>
+            <h2 class="section-title">Møt teamet vårt</h2>
 
-          <!-- Rusha -->
-          <div class="team-member">
-            <div class="team-info">
-              <h3>Rusha</h3>
-              <p class="role">Gründer og leder</p>
-              <p class="bio">
-                Rusha er gründer og leder av Nettverkshuset, hvor hun jobber med å skape et inkluderende og støttende fellesskap for alle. Med flere års erfaring innen rekruttering og samarbeid med organisasjoner som fremmer jobbmuligheter for personer med bakgrunn fra andre kulturer, er Rusha dedikert til å hjelpe mennesker med å integrere seg i arbeidslivet og samfunnet. 
-              </p>
+            <!-- Rusha -->
+            <div class="team-member">
+                <img src="Images/image/Rusha.jpg" alt="Rusha">
+                <div class="team-info">
+                    <h3>Rusha</h3>
+                    <p class="role">Gründer og leder</p>
+                    <p class="bio">
+                        Rusha er gründer og leder av Nettverkshuset, hvor hun jobber med å skape et inkluderende og 
+                        støttende fellesskap. Hun har flere års erfaring innen rekruttering og arbeid med organisasjoner 
+                        som støtter mennesker i overgang til arbeidslivet.
+                    </p>
+                </div>
             </div>
-          </div>
 
-          <!-- Sangitaa -->
-          <div class="team-member">
-            <div class="team-info">
-              <h3>Sangitaa</h3>
-              <p class="role">Digital ekspert og kreativ problemløser</p>
-              <p class="bio">
-                Sangitaa er frivillig hos Nettverkshuset og bidrar med sin ekspertise innen webutvikling og digital markedsføring.  </p>
+            <!-- Trine -->
+            <div class="team-member">
+                <img src="Images/image/Trine.jpg" alt="Trine">
+                <div class="team-info">
+                    <h3>Trine</h3>
+                    <p class="role">Karriereveileder og kursholder (Scale UP)</p>
+                    <p class="bio">
+                        Trine er karriereveileder og kursholder i Scale UP-kurset. Hun skaper et trygt og motiverende 
+                        læringsmiljø hvor deltakerne utvikler selvtillit og kompetanse.
+                    </p>
+                </div>
             </div>
-          </div>
 
-          <!-- Trisha -->
-          <div class="team-member">
-            <div class="team-info">
-              <h3>Trisha</h3>
-              <p class="role">Prosjektkoordinator</p>
-              <p class="bio">
-                Trisha bringer med seg solid erfaring, struktur og et sterkt engasjement for å få prosjekter til å lykkes. 
-              </p>
+            <!-- Sangita -->
+            <div class="team-member">
+                <img src="Images/image/Sangita.jpg" alt="Sangita">
+                <div class="team-info">
+                    <h3>Sangita</h3>
+                    <p class="role">Digital ekspert og kreativ problemløser</p>
+                    <p class="bio">
+                        Sangita bidrar som frivillig med digital kompetanse, webutvikling og markedsføring, 
+                        og styrker Nettverkshusets digitale synlighet.
+                    </p>
+                </div>
             </div>
-          </div>
+
+            <!-- Trisha -->
+            <div class="team-member">
+                <img src="Images/image/Trisha.jpg" alt="Trisha">
+                <div class="team-info">
+                    <h3>Trisha</h3>
+                    <p class="role">Prosjektkoordinator</p>
+                    <p class="bio">
+                        Trisha bringer struktur, erfaring og engasjement inn i prosjektene, og sørger for 
+                        at aktiviteter gjennomføres med kvalitet og samarbeid.
+                    </p>
+                </div>
+            </div>
 
         </div>
 
         <button class="back-btn" onclick="location.href='index.html'">← Tilbake til hjem</button>
     </div>
+
+</div>
 </body>
 </html>

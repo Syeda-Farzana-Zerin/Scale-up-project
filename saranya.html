@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saranya – Fullstack Developer</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .portfolio-wrapper { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
+        .profile-header { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+        .profile-header img { width: 260px; height: 260px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .profile-info h1 { font-size: 2.8rem; color: rgb(83, 83, 221); margin-bottom: 10px; font-family: 'Noto Serif'; }
+        .profile-info h3 { font-size: 1.5rem; font-weight: 600; color: #444; }
+        .section-title { font-size: 2rem; margin-top: 40px; color: rgb(83, 83, 221); font-family: 'Noto Serif'; }
+        .about-text { font-size: 1.2rem; margin-top: 10px; color: #444; line-height: 1.7; max-width: 900px; }
+        .skills-list { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 15px; gap: 10px; max-width: 600px; }
+        .skills-list div { background: #eef0ff; padding: 10px 15px; border-radius: 8px; font-size: 1.1rem; color: #333; }
+        .experience-box { background: #f5f6ff; padding: 20px; border-radius: 12px; margin-top: 20px; max-width: 800px; }
+        .back-btn { background-color: rgb(83, 83, 221); color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; margin-top: 40px; font-size: 1.1rem; }
+        .back-btn:hover { background-color: rgb(55, 55, 180); }
+    </style>
+</head>
+
+<body class="inter">
+
+<header class="header">
+    <nav class="navbar display-flex">
+        <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset" />
+        <ul class="navbar-items display-flex">
+            <li class="navbar-item"><a class="navbar_link grey" href="index.html">Hjem</a></li>
+            <li class="navbar-item"><a class="navbar_link grey" href="Omoss.html">Om Oss</a></li>
+            <li class="navbar-item"><a class="navbar_link grey" href="registration.html">Register</a></li>
+            <li class="navbar-item"><a class="navbar_link dark-grey" href="#">Portfolio</a></li>
+            <li class="navbar-item"><a class="navbar_link grey" href="login.html">Log In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="portfolio-wrapper">
+
+    <div class="profile-header">
+        <img class="profile-photo" src="Images/image/Saranya.jpg" alt="Saranya profile image" />
+        <div class="profile-info">
+            <h1>Saranya</h1>
+            <h3>Fullstack Developer</h3>
+        </div>
+    </div>
+
+    <h2 class="section-title">Om Meg</h2>
+    <p class="about-text">
+        Jeg er Saranya, en engasjert og løsningsorientert Fullstack Developer med erfaring i å bygge moderne webapplikasjoner fra frontend til backend. Jeg liker å kombinere strukturert problemløsning med kreative løsninger, og trives med å utvikle funksjoner som både er brukervennlige og teknisk robuste. Med sterk kompetanse innen React, Typescript, Python og databaser elsker jeg å jobbe i prosjektmiljøer hvor jeg kan lære, skape og levere kvalitet.
+    </p>
+
+    <h2 class="section-title">Ferdigheter</h2>
+    <div class="skills-list">
+        <div>React</div>
+        <div>Typescript</div>
+        <div>JavaScript</div>
+        <div>Python</div>
+        <div>SQL</div>
+        <div>GitHub</div>
+    </div>
+
+    <h2 class="section-title">Erfaring</h2>
+    <div class="experience-box">
+        <h3 style="margin-bottom: 10px;">Fullstack Developer – Prosjekter & Arbeid</h3>
+        <p>
+            • Utviklet skalérbare webapplikasjoner med moderne frontend-rammeverk.<br />
+            • Implementert backend-logikk, API-er og databaseintegrasjoner.<br />
+            • Samarbeidet i team med GitHub for versjonskontroll og prosjektflyt.<br />
+            • Optimalisert kode, forbedret UI/UX og sikret god ytelse på tvers av plattformer.<br />
+            • Bidratt i fullstack-prosjekter fra planlegging til testing og lansering.
+        </p>
+    </div>
+
+    <button class="back-btn" onclick="location.href='index.html'">← Tilbake til Hjem</button>
+</div>
+
+</body>
+</html>

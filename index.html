@@ -1,162 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nettverkshuset</title>
+    <title>Nettverkshuset – Digital Portefølje</title>
     <style>
-     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="inter">
-    <!-- header section starts-->
-    <header class="header">
-        <nav class="navbar display-flex">
-            <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset">
-            <ul class="navbar-items display-flex">
-                <li class="navbar-item"> <a class="navbar_link dark-grey" href="index.html"> Hjem </a></li>
-                <li class="navbar-item"> <a class="navbar_link grey" href="Omoss.html"> Om Oss </a></li>
-                <li class="navbar-item"> <a class="navbar_link grey" href="registration.html"> Register </a></li>
-                <li class="navbar-item"> <a class="navbar_link grey" href=""> Portfolio </a></li>
-                <li class="navbar-item"> <a class="navbar_link grey" href="login.html"> Log In </a> </li>
-            </ul>
-        </nav>
-
-        <!-- banner section starts-->
-        <div class="banner display-flex">
-            <div class="banner-desciption">
-                <h1 class="banner-heading noto-serif">Digital <span class="blue"> Portefølje </span></h1>
-                <p class="banner-paragraph grey">Her finner du digital portefølje av våre deltakere fra scale up-kurset. Ta gjerne kontakt dersom du ønsker å samarbeide eller bidra på annen måte.</p>
-            </div>
-            <img class="banner-img" src="Images/image/cover.png" alt="picture about scale-up course info">
-        </div>
-    </header>
-    <!--header section ends-->
-
-    <main> 
-        <!--Vare Arbeidssøkere section starts-->
-        <section class="arbeidssøkere">
-            <h2 class="arbeidssøkere-heading noto-serif center">Våre <span class="blue"> Kandidater </span></h2>
-            <p class="arbeidssøkere-description center grey"> Her kan du bli bedre kjent med våre flotte kandidater gjennom Digital Portfolio. </p>
-
-            <div class="portfolio-containers center">
-
-                <!-- Mukta -->
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="Images/image/Mukta.jpeg">
-                   <p class="deltakere-name"> Boishakhi</p>
-                   <p class="deltakere-title"> Software Engineer</p>
-                   <button class="primary-btn" onclick="location.href='mukta.html'">PORTFØLJE</button>
+    <div class="page-bg">
+        <!-- header section starts-->
+        <header class="header">
+            <nav class="navbar display-flex">
+                <div class="logo-wrapper display-flex">
+                    <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset">
+                    <span class="brand-text">Nettverkshuset</span>
                 </div>
+                <ul class="navbar-items display-flex">
+                    <li class="navbar-item"> <a class="navbar_link active" href="index.html">Hjem</a></li>
+                    <li class="navbar-item"> <a class="navbar_link" href="Omoss.html">Om oss</a></li>
+                    <li class="navbar-item"> <a class="navbar_link" href="registration.html">Register</a></li>
+                    <li class="navbar-item"> <a class="navbar_link" href="#kandidater">Portefølje</a></li>
+                    <li class="navbar-item"> <a class="navbar_link login-link" href="login.html">Logg inn</a></li>
+                </ul>
+            </nav>
 
-                <!-- Varsha -->
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="./Images/image/Varsha.jpeg">
-                   <p class="deltakere-name"> Varsha</p>
-                   <p class="deltakere-title"> IT Administrasjon</p>
-                   <button class="primary-btn" onclick="location.href='varsha.html'">PORTFØLJE</button>
+            <!-- banner section starts-->
+            <section class="banner display-flex">
+                <div class="banner-desciption">
+                    <p class="eyebrow-text">Scale up-kurs · Digital portefølje</p>
+                    <h1 class="banner-heading noto-serif">Digital <span class="blue">portefølje</span></h1>
+                    <p class="banner-paragraph grey">
+                        Her finner du digital portefølje av våre deltakere fra scale up-kurset.
+                        Ta gjerne kontakt dersom du ønsker å samarbeide eller bidra på annen måte.
+                    </p>
+                    <div class="banner-actions">
+                        <a href="#kandidater" class="primary-btn hero-btn">Se kandidater</a>
+                        <a href="Omoss.html" class="ghost-btn">Les mer om oss</a>
+                    </div>
                 </div>
-
-                <!-- Syeda -->
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="./Images/image/Farzana.jpeg">
-                   <p class="deltakere-name"> Syeda</p>
-                   <p class="deltakere-title"> Data Scientist</p>
-                   <button class="primary-btn" onclick="location.href='syeda.html'">PORTFØLJE</button>
+                <div class="banner-image-wrapper">
+                    <img class="banner-img" src="Images/image/cover.png" alt="Bilde fra scale-up kurs">
+                    <div class="banner-stat-card">
+                        <p class="stat-number">12+</p>
+                        <p class="stat-label">dyktige kandidater</p>
+                    </div>
                 </div>
+            </section>
+        </header>
+        <!--header section ends-->
 
-                <!-- Others unchanged -->
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name">Saranya</p>
-                   <p class="deltakere-title"> Fullstack Developer </p>
-                   <button class="primary-btn">PORTFØLJE </button>
+        <main> 
+            <!--Våre Kandidater section starts-->
+            <section id="kandidater" class="arbeidssøkere">
+                <h2 class="arbeidssøkere-heading noto-serif center">
+                    Våre <span class="blue">kandidater</span>
+                </h2>
+                <p class="arbeidssøkere-description center grey">
+                    Her kan du bli bedre kjent med våre flotte kandidater gjennom digital portefølje.
+                </p>
+
+                <div class="portfolio-containers center">
+
+                    <!-- Mukta -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Mukta.jpeg" alt="Portrett av Boishakhi">
+                       <p class="deltakere-name">Boishakhi</p>
+                       <p class="deltakere-title">Software Engineer</p>
+                       <button class="primary-btn card-btn" onclick="location.href='mukta.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Varsha -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Varsha.jpeg" alt="Portrett av Varsha">
+                       <p class="deltakere-name">Varsha</p>
+                       <p class="deltakere-title">IT Administrasjon</p>
+                       <button class="primary-btn card-btn" onclick="location.href='varsha.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Syeda -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Farzana.jpeg" alt="Portrett av Syeda">
+                       <p class="deltakere-name">Syeda</p>
+                       <p class="deltakere-title">Data Scientist</p>
+                       <button class="primary-btn card-btn" onclick="location.href='syeda.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Vinithra -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/VIni.jpeg" alt="Portrett av Vinithra">
+                       <p class="deltakere-name">Vinithra</p>
+                       <p class="deltakere-title">Software Engineer</p>
+                       <button class="primary-btn card-btn" onclick="location.href='vini.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Aarcha -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Archa.jpg" alt="Portrett av Aarcha">
+                       <p class="deltakere-name">Aarcha</p>
+                       <p class="deltakere-title">PHD, Researcher</p>
+                       <button class="primary-btn card-btn" onclick="location.href='Archa.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Soumya -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Somyea.jpeg" alt="Portrett av Soumya">
+                       <p class="deltakere-name">Soumya</p>
+                       <p class="deltakere-title">Data Analyst</p>
+                       <button class="primary-btn card-btn" onclick="location.href='Soumya.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Sumathi -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/sumoti.jpeg" alt="Portrett av Sumathi">
+                       <p class="deltakere-name">Sumathi</p>
+                       <p class="deltakere-title">Cloud Service</p>
+                       <button class="primary-btn card-btn" onclick="location.href='sumathi.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Divya -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Divya.jpg" alt="Portrett av Divya">
+                       <p class="deltakere-name">Divya</p>
+                       <p class="deltakere-title">Financial Analyst</p>
+                       <button class="primary-btn card-btn" onclick="location.href='divya.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Liya -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Liya.jpg" alt="Portrett av Liya">
+                       <p class="deltakere-name">Liya</p>
+                       <p class="deltakere-title">Financial Analyst</p>
+                       <button class="primary-btn card-btn" onclick="location.href='liya.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Saranya -->
+                    <article class="portfolio-container">
+                       <img class="deltakere-img" src="Images/image/Saranya.jpg" alt="Portrett av Saranya">
+                       <p class="deltakere-name">Saranya</p>
+                       <p class="deltakere-title">Fullstack Developer</p>
+                       <button class="primary-btn card-btn" onclick="location.href='saranya.html'">Se portefølje</button>
+                    </article>
+
+                    <!-- Swarupa -->
+                    <article class="portfolio-container">
+                       <div class="deltakere-img placeholder-avatar" aria-hidden="true">S</div>
+                       <p class="deltakere-name">Swarupa</p>
+                       <p class="deltakere-title">Software Developer</p>
+                       <button class="primary-btn card-btn" disabled>Portefølje kommer</button>
+                    </article>
+
+                    <!-- Riya -->
+                    <article class="portfolio-container">
+                       <div class="deltakere-img placeholder-avatar" aria-hidden="true">R</div>
+                       <p class="deltakere-name">Riya</p>
+                       <p class="deltakere-title">Financial Analyst</p>
+                       <button class="primary-btn card-btn" disabled>Portefølje kommer</button>
+                    </article>
                 </div>
+            </section>
 
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="./Images/image/VIni.jpeg">
-                   <P class="deltakere-name"> Vinithra</P>
-                   <p class="deltakere-title"> Software Engineer</p>
-                   <button class="primary-btn">PORTFØLJE </button>
+            <!-- Subscribe section -->
+            <section class="contact-form">
+                <div class="subscribe-card">
+                    <img class="subscribe-img" src="Images/image/subscirbe.png" alt="Gruppebilde av deltakerne i scale-up prosjektet">
+                    <div class="subscribe-content">
+                        <h2 class="subscribe-heading center noto-serif">Fra potensial til praksis</h2>
+                        <p class="subscribe-text">
+                            Meld deg på nyhetsbrevet vårt for å få oppdateringer om nye kandidater, prosjekter og samarbeid.
+                        </p>
+                        <form class="subscribe-form display-flex">
+                           <input type="email" id="email" placeholder="Skriv inn din e‑post" required>
+                           <button class="subscribe-btn" type="submit">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name">Swarupa </p>
-                   <p class="deltakere-title"> Software Developer</p>
-                   <button class="primary-btn">PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name"> Aarcha</p>
-                   <p class="deltakere-title"> PHD, Researcher</p>
-                   <button class="primary-btn">PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="./Images/image/Somyea.jpeg">
-                   <p class="deltakere-name"> Soumya</p>
-                   <p class="deltakere-title"> Data Analyst</p>
-                   <button class="primary-btn">PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img" src="./Images/image/sumoti.jpeg">
-                   <p class="deltakere-name"> Sumathi</p>
-                   <p class="deltakere-title">Cloud Service</p>
-                   <button class="primary-btn"> PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name"> Divya</p>
-                   <p class="deltakere-title"> Financial Analyst</p>
-                   <button class="primary-btn">PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name">Liya</p>
-                   <p class="deltakere-title">Financial Analyst</p>
-                   <button class="primary-btn"> PORTFØLJE </button>
-                </div>
-
-                <div class="portfolio-container">
-                   <img class="deltakere-img">
-                   <p class="deltakere-name">Riya</p>
-                   <p class="deltakere-title"> Financial Analyst</p>
-                   <button class="primary-btn">PORTFØLJE </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Subscribe section -->
-        <section class="contact-form">
-            <img class="subscribe-img" src="./Images/image/subscirbe.png" alt="group picture of the participants of scale-up project">
-            <div class="subscribe display-flex"></div>
-            <h2 class="subscribe-heading center">Fra Potensial til Praksis</h2>
-            <form class="subscribe-form display-flex">
-               <input type="email" id="email" placeholder="Write Your Email" required>
-               <button class="subscribe-btn"> Subscribe </button>
-            </form>
-         </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer display-flex">
-      <div class="copyright">Copyright @ 2025 by 
-        <a href="https://www.nettverkshuset.no/">Nettverkshuset</a></div>
-      <div class="footer-item">
-         <img class="logo" src="./Images/image/logo.jpg"></div>
-      <div class="display-flex social-media">
-         <a href="https://www.linkedin.com/company/nettverkshuset.no/posts/?feedView=all"> <i class="fab fa-linkedin"></i></a>
-         <a href="https://www.facebook.com/p/Nettverkshuset-61568715764908/"> <i class="fa-brands fa-facebook"></i></a>
-         <a href="https://www.instagram.com/nettverkshuset/"> <i class="fab fa-instagram"></i></a>
-      </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer display-flex">
+          <div class="copyright">
+            <span>© 2025</span> 
+            <span> · </span>
+            <a href="https://www.nettverkshuset.no/">Nettverkshuset</a>
+          </div>
+          <div class="footer-item">
+             <img class="logo footer-logo" src="Images/image/logo.jpg" alt="Nettverkshuset logo">
+          </div>
+          <div class="display-flex social-media">
+             <a href="https://www.linkedin.com/company/nettverkshuset.no/posts/?feedView=all" aria-label="LinkedIn"> <i class="fab fa-linkedin"></i></a>
+             <a href="https://www.facebook.com/p/Nettverkshuset-61568715764908/" aria-label="Facebook"> <i class="fa-brands fa-facebook"></i></a>
+             <a href="https://www.instagram.com/nettverkshuset/" aria-label="Instagram"> <i class="fab fa-instagram"></i></a>
+          </div>
+        </footer>
+    </div>
 </body>
 </html>

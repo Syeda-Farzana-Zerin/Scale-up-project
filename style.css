@@ -1,273 +1,541 @@
-.noto-serif{
+/* ==== Base Typography & Layout ==== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #252432;
+  background: radial-gradient(circle at top left, #f1f5ff 0%, #ffffff 45%, #fdf2ff 100%);
+}
+
+.page-bg {
+  min-height: 100vh;
+}
+
+/* fonts */
+
+.noto-serif {
   font-family: "Noto Serif";
   font-optical-sizing: auto;
 }
 
-
 .inter {
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
-/*shared style*/
+/* shared */
 
-.header, .arbeidssøkere, .footer{
-    max-width: 1140px;
-    margin: 0 auto;
+.header,
+.arbeidssøkere,
+.footer,
+.contact-form {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .display-flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 .blue {
-    color: rgb(83, 83, 221);
+  color: rgb(83, 83, 221);
 }
 
 .dark-grey {
   color: rgba(37, 36, 50, 1);
 }
 
-.grey{
-  color:rgba(137, 135, 161, 1)
+.grey {
+  color: rgba(137, 135, 161, 1);
 }
 
-.white {
-    color: whitesmoke;
-}
-
-
-
-
-/*Header Section*/
+/* ===== HEADER & NAVBAR ===== */
 
 .header {
-
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 .navbar {
-    justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+}
+
+.logo-wrapper {
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .logo {
-    width: 15rem;
-    height: 10rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.brand-text {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #4a4a68;
 }
 
 .navbar-items {
-    gap: 2rem;
-    align-items: center;
-}
-
-.navbar-item {
-    list-style: none;
-    font-size: 1rem;
-}
-
-.navbar-item :hover {
-    color: green;
-    text-decoration: underline;
-}
-
-.navbar_link {
-    text-decoration: none;
-    
-    
-}
-
-.navbar_link :hover{
-    cursor: pointer;
-}
-
-/*banner section starts here*/
-
-.banner {
-    align-items: center;
-    margin-top: 130px;
-    justify-content: space-around;
-}
-
-.banner-desciption {
-    
-}
-
-.banner-heading {
-    font-size: 3rem;
-    font-style: 900;
-}
-
-.banner-paragraph {
-    font-size: 1.5rem;
-    max-width: 570px;
-    text-shadow: 0 1px 4px rgb(239, 238, 245);
-    
-}
-
-.banner-img {
-    max-width: 570px;
-    max-height: 355px;
-    border-radius: 1rem;
-    filter: drop-shadow(8px 8px 10px gray);
-}
-
-/*Vare Arbeidssøkere section starts*/
-
-.arbeidssøkere {
-    margin-top: 140px;
-    margin-bottom: 120px;
-}
-
-.arbeidssøkere-heading {
-    font-size: 3rem;
-    font-style: 900;
-}
-
-.arbeidssøkere-description {
-    font-size: 1.5rem;
-}
-
-.portfolio-containers {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.portfolio-container {
-    border: 2px solid gray;
-    border-radius: 1rem;
-    padding: 10px 10px;
-}
-
-.deltakere-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-
-}
-
-.deltakere-name {
-    font-size: 1.2rem;
-}
-
-.deltakere-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.primary-btn {
-  background-color: rgb(83, 83, 221);;
-  border: none;
-  cursor: pointer;
-  color: white;
-  padding: 10px 20px;
-  width: 90%;
-}
-
-/* subscribe section starts*/
-
-.contact-form {
-    margin-top: 0 auto;
-}
-
-.subscribe{
-    flex-direction: column;
-}
-
-.subscribe-img {
-    width: 100%;
-    height: 500px;
-    filter: grayscale(50%);
-}
-
-.subscribe-heading {
-    font-size: 3rem;
-    font-weight: 400;
-}
-
-#email {
-  flex: 0.7;
-  padding:10px;
-  outline: none;
-}
-
-.subscribe-form {
- margin: 0 auto;
- justify-content: center;
- align-items: center;
- max-width: 70%;
- padding: 0px 30px;
-}
-
-.subscribe-btn {
-  padding: 12px;
-  border: none;
-  background-color: rgb(83, 83, 221);
-  color: white;
-}
-
-.subscribe-btn:hover{
- cursor: pointer;   
-}
-
-/*footer starts here*/
-.footer {
-  margin-top: 3.2rem;
-  justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
 }
 
-.copyright{
-    font-size: 1.5rem;
+.navbar-item {
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.navbar_link {
+  text-decoration: none;
+  color: #5b5b7a;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.navbar_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5353dd, #f973c9);
+  transition: width 0.2s ease;
+}
+
+.navbar_link:hover::after {
+  width: 100%;
+}
+
+.navbar_link:hover {
+  color: #2f2f6d;
+}
+
+.navbar_link.active {
+  color: #2f2f6d;
+}
+
+.navbar_link.active::after {
+  width: 100%;
+}
+
+.login-link {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(83, 83, 221, 0.3);
+  background: linear-gradient(135deg, rgba(83, 83, 221, 0.07), rgba(249, 115, 222, 0.04));
+}
+
+/* ===== HERO / BANNER ===== */
+
+.banner {
+  align-items: center;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2.75rem 2.5rem;
+  border-radius: 2rem;
+  background: linear-gradient(135deg, rgba(83, 83, 221, 0.07), rgba(249, 115, 222, 0.05));
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+}
+
+.banner-desciption {
+  max-width: 550px;
+}
+
+.eyebrow-text {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #7f7fa5;
+  margin-bottom: 0.75rem;
+}
+
+.banner-heading {
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+}
+
+.banner-heading span {
+  background: linear-gradient(120deg, #5353dd, #f973c9);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.banner-paragraph {
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin-top: 0;
+  margin-bottom: 1.75rem;
+  color: #4b4b66;
+}
+
+.banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero-btn {
+  text-decoration: none;
+  text-align: center;
+}
+
+.ghost-btn {
+  border-radius: 999px;
+  border: 1px solid rgba(83, 83, 221, 0.3);
+  padding: 0.7rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  color: #2f2f6d;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ghost-btn:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.13);
+}
+
+.banner-image-wrapper {
+  position: relative;
+}
+
+.banner-img {
+  max-width: 420px;
+  border-radius: 1.5rem;
+  display: block;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.33);
+}
+
+.banner-stat-card {
+  position: absolute;
+  left: -1rem;
+  bottom: -1rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+}
+
+.stat-number {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #2f2f6d;
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7b7b9b;
+}
+
+/* ===== KANDIDATER SECTION ===== */
+
+.arbeidssøkere {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.arbeidssøkere-heading {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.arbeidssøkere-description {
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0.5rem auto 2.5rem auto;
+  color: #5c5c7b;
+}
+
+/* Cards grid */
+
+.portfolio-containers {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+.portfolio-container {
+  border-radius: 1.4rem;
+  padding: 1.4rem 1.25rem 1.5rem;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.09);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.2s ease;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.portfolio-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.16);
+  border-color: rgba(83, 83, 221, 0.4);
+}
+
+.deltakere-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.9rem auto;
+}
+
+.placeholder-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff, #fbcfe8);
+  color: #312e81;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.deltakere-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.deltakere-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+
+.primary-btn {
+  background-color: rgb(83, 83, 221);
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.34);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.primary-btn:hover {
+  background-color: #3730a3;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 42px rgba(55, 48, 163, 0.42);
+}
+
+.primary-btn:disabled {
+  background-color: #e5e7eb;
+  color: #6b7280;
+  box-shadow: none;
+  cursor: default;
+}
+
+.card-btn {
+  width: 100%;
+}
+
+/* ===== SUBSCRIBE SECTION ===== */
+
+.contact-form {
+  margin-bottom: 4.5rem;
+}
+
+.subscribe-card {
+  border-radius: 2rem;
+  overflow: hidden;
+  background: #0f172a;
+  color: white;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.6);
+}
+
+.subscribe-img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  filter: grayscale(30%) brightness(1.1);
+}
+
+.subscribe-content {
+  padding: 2.4rem 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.1rem;
+}
+
+.subscribe-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subscribe-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #e5e7eb;
+  margin: 0;
+}
+
+#email {
+  flex: 1;
+  padding: 0.9rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  outline: none;
+  font-size: 0.95rem;
+}
+
+#email:focus {
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.7);
+}
+
+.subscribe-form {
+  margin: 0.75rem 0 0 0;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  gap: 0.7rem;
+}
+
+.subscribe-btn {
+  padding: 0.85rem 1.5rem;
+  border: none;
+  background-color: #f97316;
+  border-radius: 999px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 16px 34px rgba(248, 113, 113, 0.4);
+  transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 22px 44px rgba(248, 113, 113, 0.52);
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.footer a {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 999px;
 }
 
 .social-media {
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
-.fa-linkedin, .fa-facebook {
-  font-size: 30px;
-  color: rgb(9, 83, 211);
+.fa-linkedin,
+.fa-facebook,
+.fa-instagram {
+  font-size: 1.6rem;
+  color: #4f46e5;
+  transition: transform 0.18s ease, color 0.18s ease;
 }
 
-.fa-youtube, .fa-instagram {
-  font-size: 30px;
-  color: red;
+.fa-linkedin:hover,
+.fa-facebook:hover,
+.fa-instagram:hover {
+  transform: translateY(-2px);
+  color: #1d4ed8;
 }
 
+/* ===== REGISTRATION FORM (unchanged layout, slightly polished) ===== */
 
-/*registreringsskjema starts here*/
-
-.registreringsskjema{
-  margin: 0 auto;
-  background-color: #acf3c0;
+.registreringsskjema {
+  margin: 2.5rem auto;
+  background-color: #e0fbea;
   border-radius: 20px;
   padding: 40px;
-  Width: 600px;
+  width: min(600px, 100% - 3rem);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
 }
 
 .registreringsskjema-heading {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 30px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
 }
 
-.skjema{
-    justify-content: center;
-    align-items: center;
+.skjema {
+  justify-content: center;
+  align-items: center;
 }
 
 .skjema-name {
-    gap: 3.2rem;
+  gap: 3.2rem;
 }
 
 .skjema label {
-  font-weight: bold;
-  margin-top: 15px;
+  font-weight: 600;
+  margin-top: 0.8rem;
   display: block;
 }
 
@@ -276,15 +544,15 @@
 .skjema input[type="tel"] {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+  margin-top: 0.4rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #cbd5e1;
   border-radius: 6px;
 }
 
 /* Resume upload section */
 .upload-section {
-  margin-top: 20px;
+  margin-top: 1.3rem;
 }
 
 .upload-box {
@@ -340,11 +608,77 @@ input[type="submit"]:hover {
   background-color: #004dcc;
 }
 
-.profile-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: top; /* keeps head visible */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 960px) {
+  .navbar {
+    padding-inline: 1rem;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 2.2rem 1.8rem;
+  }
+
+  .banner-image-wrapper {
+    align-self: center;
+  }
+
+  .portfolio-containers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .subscribe-card {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe-img {
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar-items {
+    display: none; /* simple mobile approach; could be replaced with real burger menu later */
+  }
+
+  .header,
+  .arbeidssøkere,
+  .footer,
+  .contact-form {
+    padding-inline: 1rem;
+  }
+
+  .banner {
+    padding: 1.8rem 1.5rem;
+    margin-top: 1.8rem;
+  }
+
+  .arbeidssøkere {
+    margin-top: 3rem;
+  }
+
+  .portfolio-containers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subscribe-content {
+    padding: 1.8rem 1.6rem 2.1rem 1.6rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-containers {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-paragraph {
+    font-size: 0.98rem;
+  }
 }

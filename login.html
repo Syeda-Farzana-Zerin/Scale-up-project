@@ -1,83 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login & Signup</title>
+    <title>Logg inn & Sign up</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top left, #f1f5ff 0%, #ffffff 45%, #fdf2ff 100%);
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-page-wrapper {
+            width: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #f5f7ff;
-            font-family: "Inter", sans-serif;
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
 
         .login-container {
-            width: 400px;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 420px;
+            padding: 35px 32px;
+            border-radius: 25px;
+            background: linear-gradient(135deg, rgba(255,192,253,0.40), rgba(142,123,255,0.40));
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.5);
+            box-shadow:
+                0 28px 60px rgba(83, 83, 221, 0.25),
+                0 18px 40px rgba(249, 115, 222, 0.25);
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #333;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: #2f2f6d;
+            font-weight: 700;
         }
 
         form {
             display: flex;
             flex-direction: column;
+            gap: 14px;
         }
 
         input {
-            padding: 10px;
+            padding: 12px;
+            border: 1px solid #d5d9ff;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            background: white;
+            transition: 0.2s ease;
+        }
+
+        input:focus {
+            border-color: #7b5cff;
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #444;
             margin-top: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
         }
 
         .btn {
-            margin-top: 20px;
+            margin-top: 18px;
             padding: 12px;
-            background: rgb(83, 83, 221);
+            background: linear-gradient(135deg, #5353dd, #f973c9);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 999px;
             cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 15px 35px rgba(79, 70, 229, 0.3);
+            transition: 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 22px 50px rgba(79, 70, 229, 0.45);
         }
 
         .toggle-text {
             text-align: center;
-            margin-top: 15px;
-            color: #555;
+            margin-top: 18px;
+            color: #4b4b66;
             cursor: pointer;
+            font-size: 0.95rem;
+            transition: 0.2s ease;
+        }
+
+        .toggle-text:hover {
+            color: #2f2f6d;
+            text-decoration: underline;
         }
     </style>
 </head>
-<body>
-    <div class="login-container">
-        <h2 id="form-title">Sign In</h2>
 
-        <!-- Sign In Form -->
-        <form id="signin-form">
-            <input type="text" id="signin-username" placeholder="Username" required />
-            <input type="password" id="signin-password" placeholder="Password" required />
-            <button class="btn" type="button" onclick="signIn()">Sign In</button>
-        </form>
+<body class="inter">
 
-        <!-- Sign Up Form -->
-        <form id="signup-form" style="display: none;">
-            <input type="text" id="signup-username" placeholder="Create Username" required />
-            <input type="password" id="signup-password" placeholder="Create Password" required />
-            <button class="btn" type="button" onclick="signUp()">Sign Up</button>
-        </form>
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar display-flex">
+            <div class="logo-wrapper display-flex">
+                <img class="logo" src="Images/image/logo.jpg" alt="logo">
+                <span class="brand-text">Nettverkshuset</span>
+            </div>
 
-        <p class="toggle-text" onclick="toggleForms()">Don't have an account? Sign up</p>
+            <ul class="navbar-items display-flex">
+                <li class="navbar-item"><a class="navbar_link" href="index.html">Hjem</a></li>
+                <li class="navbar-item"><a class="navbar_link" href="Omoss.html">Om Oss</a></li>
+                <li class="navbar-item"><a class="navbar_link" href="registration.html">Registrering</a></li>
+                <li class="navbar-item"><a class="navbar_link active login-link" href="login.html">Logg inn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- LOGIN / SIGNUP SECTION -->
+    <div class="login-page-wrapper">
+        <div class="login-container">
+            <h2 id="form-title">Logg inn</h2>
+
+            <!-- SIGN IN FORM -->
+            <form id="signin-form">
+                <label for="signin-username">Brukernavn</label>
+                <input type="text" id="signin-username" placeholder="Skriv inn brukernavn" required />
+
+                <label for="signin-password">Passord</label>
+                <input type="password" id="signin-password" placeholder="Skriv inn passord" required />
+
+                <button class="btn" type="button" onclick="signIn()">Logg inn</button>
+            </form>
+
+            <!-- SIGN UP FORM -->
+            <form id="signup-form" style="display: none;">
+                <label for="signup-username">Lag brukernavn</label>
+                <input type="text" id="signup-username" placeholder="Lag et brukernavn" required />
+
+                <label for="signup-password">Lag passord</label>
+                <input type="password" id="signup-password" placeholder="Lag et passord" required />
+
+                <button class="btn" type="button" onclick="signUp()">Sign up</button>
+            </form>
+
+            <!-- TOGGLE -->
+            <p class="toggle-text" onclick="toggleForms()">Har du ikke konto? Sign up</p>
+        </div>
     </div>
 
     <script>
@@ -90,13 +171,13 @@
             if (signin.style.display === 'none') {
                 signin.style.display = 'block';
                 signup.style.display = 'none';
-                title.textContent = 'Sign In';
-                toggle.textContent = "Don't have an account? Sign up";
+                title.textContent = 'Logg inn';
+                toggle.textContent = "Har du ikke konto? Sign deg";
             } else {
                 signin.style.display = 'none';
                 signup.style.display = 'block';
-                title.textContent = 'Sign Up';
-                toggle.textContent = 'Already have an account? Sign in';
+                title.textContent = 'Sign up';
+                toggle.textContent = 'Har du allerede konto? Logg inn';
             }
         }
 
@@ -107,7 +188,7 @@
             if (user && pass) {
                 localStorage.setItem('savedUser', user);
                 localStorage.setItem('savedPass', pass);
-                alert('Signup successful! You can now sign in.');
+                alert('Signed up! Nå kan du logge inn.');
                 toggleForms();
             }
         }
@@ -120,12 +201,13 @@
             const savedPass = localStorage.getItem('savedPass');
 
             if (user === savedUser && pass === savedPass) {
-                alert('Login successful!');
+                alert('Innlogging vellykket!');
                 window.location.href = 'index.html';
             } else {
-                alert('Incorrect username or password');
+                alert('Feil brukernavn eller passord.');
             }
         }
     </script>
+
 </body>
 </html>

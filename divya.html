@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya – Financial Analyst</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portfolio-wrapper { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
+        .profile-header { display: flex; gap: 40px; align-items: center; margin-bottom: 40px; }
+        .profile-header img { width: 260px; height: 260px; border-radius: 20px; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .profile-info h1 { font-size: 2.8rem; color: rgb(83, 83, 221); margin-bottom: 10px; font-family: "Noto Serif"; }
+        .profile-info h3 { font-size: 1.5rem; font-weight: 600; color: #444; }
+        .section-title { font-size: 2rem; margin-top: 40px; color: rgb(83, 83, 221); font-family: "Noto Serif"; }
+        .about-text { font-size: 1.2rem; margin-top: 10px; color: #444; line-height: 1.7; max-width: 900px; }
+        .skills-list { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 15px; gap: 10px; max-width: 600px; }
+        .skills-list div { background: #eef0ff; padding: 10px 15px; border-radius: 8px; font-size: 1.1rem; color: #333; }
+        .experience-box { background: #f5f6ff; padding: 20px; border-radius: 12px; margin-top: 20px; max-width: 800px; }
+        .back-btn { background-color: rgb(83, 83, 221); color: white; padding: 12px 25px; border: none; border-radius: 8px; cursor: pointer; margin-top: 40px; font-size: 1.1rem; }
+        .back-btn:hover { background-color: rgb(55, 55, 180); }
+    </style>
+</head>
+
+<body class="inter">
+
+<header class="header">
+    <nav class="navbar display-flex">
+        <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset">
+        <ul class="navbar-items display-flex">
+            <li class="navbar-item"> <a class="navbar_link grey" href="index.html"> Hjem </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="Omoss.html"> Om Oss </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="registration.html"> Register </a></li>
+            <li class="navbar-item"> <a class="navbar_link dark-grey" href="#"> Portfolio </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="login.html"> Log In </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="portfolio-wrapper">
+
+    <div class="profile-header">
+        <img class="profile-photo" src="Images/image/Divya.jpg" alt="Divya profile image">
+        <div class="profile-info">
+            <h1>Divya</h1>
+            <h3>Financial Analyst</h3>
+        </div>
+    </div>
+
+    <h2 class="section-title">Om Meg</h2>
+    <p class="about-text">
+        Jeg er Divya, en analytisk og detaljorientert Financial Analyst med sterk interesse for finansielle prosesser, risikovurdering og strategisk beslutningsstøtte. Jeg kombinerer faglig innsikt med praktiske ferdigheter for å forstå komplekse økonomiske data, tolke reguleringer og identifisere forbedringsmuligheter. Jeg trives i miljøer hvor presisjon, struktur og kritisk tenkning står sentralt, og brenner for å bidra til bedre økonomisk styring og datadrevet innsikt.
+    </p>
+
+    <h2 class="section-title">Ferdigheter</h2>
+    <div class="skills-list">
+        <div>Forretningsanalyse</div>
+        <div>Forståelse av finansregulering</div>
+        <div>Excel</div>
+        <div>Finansiell datarisiko</div>
+        <div>Compliance-kunnskap</div>
+        <div>Datainnsikt & rapportering</div>
+    </div>
+
+    <h2 class="section-title">Erfaring</h2>
+    <div class="experience-box">
+        <h3 style="margin-bottom: 10px;">Financial Analyst – Prosjekter & Arbeid</h3>
+        <p>
+            • Utført analyser av økonomiske rapporter og markedsdata.<br>
+            • Utviklet Excel-modeller for prognoser, risikoanalyse og ytelsesrapportering.<br>
+            • Arbeidet med finansreguleringer og etterlevelse i tråd med gjeldende krav.<br>
+            • Identifisert risikoområder gjennom dataanalyse og vurdering av compliance-prosesser.<br>
+            • Samarbeidet tett med ledelse for å presentere innsikt og økonomiske anbefalinger.<br>
+        </p>
+    </div>
+
+    <button class="back-btn" onclick="location.href='index.html'">← Tilbake til Hjem</button>
+</div>
+
+</body>
+</html>

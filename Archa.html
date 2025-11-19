@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archa – PhD Researcher</title>
+
+    <!-- Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+    </style>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .portfolio-wrapper {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .profile-header {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .profile-header img {
+            width: 260px;
+            height: 260px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .profile-info h1 {
+            font-size: 2.8rem;
+            color: rgb(83, 83, 221);
+            margin-bottom: 10px;
+            font-family: "Noto Serif";
+        }
+        .profile-info h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #444;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-top: 40px;
+            color: rgb(83, 83, 221);
+            font-family: "Noto Serif";
+        }
+        .about-text {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #444;
+            line-height: 1.7;
+            max-width: 900px;
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 15px;
+            gap: 10px;
+            max-width: 600px;
+        }
+        .skills-list div {
+            background: #eef0ff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .experience-box {
+            background: #f5f6ff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            max-width: 800px;
+        }
+        .back-btn {
+            background-color: rgb(83, 83, 221);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 40px;
+            font-size: 1.1rem;
+        }
+        .back-btn:hover {
+            background-color: rgb(55, 55, 180);
+        }
+    </style>
+</head>
+
+<body class="inter">
+
+<header class="header">
+    <nav class="navbar display-flex">
+        <img class="logo" src="Images/image/logo.jpg" alt="logo of Nettverkshuset">
+        <ul class="navbar-items display-flex">
+            <li class="navbar-item"> <a class="navbar_link grey" href="index.html"> Hjem </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="Omoss.html"> Om Oss </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="registration.html"> Register </a></li>
+            <li class="navbar-item"> <a class="navbar_link dark-grey" href="#"> Portfolio </a></li>
+            <li class="navbar-item"> <a class="navbar_link grey" href="login.html"> Log In </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="portfolio-wrapper">
+
+    <div class="profile-header">
+        <img class="profile-photo" src="Images/image/Archa.jpg" alt="Archa profile image">
+        <div class="profile-info">
+            <h1>Archa</h1>
+            <h3>PhD Researcher</h3>
+        </div>
+    </div>
+
+    <h2 class="section-title">Om Meg</h2>
+    <p class="about-text">
+        Jeg er Archa, en dedikert PhD Researcher med stor interesse for forsknings- og utviklingsarbeid innen teknologi og laboratorieanalyse. Jeg kombinerer analytisk tenkning med metodisk presisjon, og arbeider aktivt med å utvikle nye innsikter gjennom eksperimenter, databehandling og tekniske modeller. Jeg drives av nysgjerrighet, vitenskapelig integritet og et ønske om å bidra med kunnskap som kan skape innovasjon og fremtidige løsninger.
+    </p>
+
+    <h2 class="section-title">Ferdigheter</h2>
+    <div class="skills-list">
+        <div>Matlab</div>
+        <div>HTML</div>
+        <div>Java</div>
+        <div>Research & Development</div>
+        <div>Lab instrument analysis</div>
+        <div>Datafortolkning</div>
+    </div>
+
+    <h2 class="section-title">Erfaring</h2>
+    <div class="experience-box">
+        <h3 style="margin-bottom: 10px;">PhD Research – Prosjekter & Arbeid</h3>
+        <p>
+            • Utført avanserte laboratorieanalyser og instrumentmålinger.<br>
+            • Utviklet tekniske modeller i Matlab for eksperimentelle datasett.<br>
+            • Designet og optimalisert forskningsmetoder for R&D-prosjekter.<br>
+            • Dokumentert vitenskapelige funn og presentert resultater i forskningsmiljøer.<br>
+            • Samarbeidet på tverrfaglige forskningsinitiativ og tekniske utviklingsprosesser.
+        </p>
+    </div>
+
+    <button class="back-btn" onclick="location.href='index.html'">← Tilbake til Hjem</button>
+</div>
+
+</body>
+</html>
